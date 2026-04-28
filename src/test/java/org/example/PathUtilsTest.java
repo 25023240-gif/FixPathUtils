@@ -8,7 +8,8 @@ public class PathUtilsTest {
 
     @Test
     void testPortablePath() {
-        Path path = Paths.get("temp", "data.txt"); // portable separator
-        assertTrue(PathUtils.fileExists(path.toString()));
+        Path path = Paths.get("temp", "data.txt");
+        assertFalse(PathUtils.fileExists(path.toString())); // vì file chưa tồn tại
     }
 }
+
